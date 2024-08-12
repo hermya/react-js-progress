@@ -1,5 +1,6 @@
 import reactImg from '../assets/react-core-concepts.png';
 const reactDescriptions = ['Fundamental','Crucial','Important', 'Core'];
+import './Header.css';
 
 export default function Header() {
     function getRandomInt() {
