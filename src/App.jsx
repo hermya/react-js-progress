@@ -4,6 +4,9 @@ import CoreConcept from './components/CoreConcepts.jsx';
 import TabButton from './components/TabButton.jsx';
 
 function App() {
+  const handleClick = () => {
+
+  }
   return (
     <div>
       <Header />
@@ -22,11 +25,11 @@ function App() {
             Examples
           </h2>
           <menu>
-            <TabButton>Components</TabButton>
-            <TabButton>JSX</TabButton>
-            <TabButton>Props</TabButton>
-            <TabButton>States</TabButton>
-
+            <TabButton onClick={handleClick} >Components</TabButton>
+            <TabButton onClick={handleClick} >JSX</TabButton>
+            <TabButton onClick={handleClick} >Props</TabButton>
+            <TabButton onClick={handleClick} >States</TabButton>
+            
           </menu>
         </section>
       </main>
