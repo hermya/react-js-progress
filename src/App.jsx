@@ -7,10 +7,12 @@ import TabButton from './components/TabButton.jsx';
 
 function App() {
   const [tabContent, setTabContent] = useState();
+  const [selectedTab, setSelectedTab] = useState();
 
   const handleClick = (selectedButton) => {
     //alert(selectedButton);
     setTabContent(EXAMPLES[selectedButton]);
+    setSelectedTab(selectedButton);
   };
 
   return (
@@ -31,10 +33,10 @@ function App() {
             Examples
           </h2>
           <menu>
-            <TabButton onClick={() => handleClick('components')} >Components</TabButton>
-            <TabButton onClick={() => handleClick('jsx')} >JSX</TabButton>
-            <TabButton onClick={() => handleClick('props')} >Props</TabButton>
-            <TabButton onClick={() => handleClick('state')} >States</TabButton>
+            <TabButton onClick={() => handleClick('components')} isSelected={selectedTab == 'components'} >Components</TabButton>
+            <TabButton onClick={() => handleClick('jsx')} isSelected={selectedTab == 'jsx'}>JSX</TabButton>
+            <TabButton onClick={() => handleClick('props')} isSelected={selectedTab == 'props'}>Props</TabButton>
+            <TabButton onClick={() => handleClick('state')} isSelected={selectedTab == 'state'}>States</TabButton>
           </menu>
           {
             !tabContent ?
