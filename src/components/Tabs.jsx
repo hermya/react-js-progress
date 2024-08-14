@@ -1,9 +1,10 @@
 
-export default function Tabs({ buttons, children }) {
+export default function Tabs({ buttons, children, wrapper }) {
+    const Wrapper = wrapper;
     return (<>
-        <menu>
+        <Wrapper>
             {buttons}
-        </menu>
+        </Wrapper>
         {children}
     </>);
 }

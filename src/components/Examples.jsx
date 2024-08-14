@@ -18,12 +18,13 @@ export default function Examples() {
         <TabButton onClick={() => handleClick('props')} isSelected={selectedTab == 'props'}>Props</TabButton>
         <TabButton onClick={() => handleClick('state')} isSelected={selectedTab == 'state'}>States</TabButton>
     </>;
+
     return (
         <section id="examples">
             <h2>
                 Examples
             </h2>
-            <Tabs buttons={tabButtons}>
+            <Tabs buttons={tabButtons} wrapper="menu" >
                 {
                     !tabContent ?
                     <p>Please select a topic!</p> :
